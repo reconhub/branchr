@@ -1,9 +1,20 @@
 Package: branchr
-Title: What the Package Does (one line, title case)
-Version: 0.0.0.9000
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Title: R Estimation from Cluster Sizes
+Version: 1.0.0
+Authors@R: c(person("Pierre", "Nouvellet",
+                  email = "p.nouvellet@imperial.ac.uk",
+		  role = c("aut", "cre")),
+           person("Thibaut", "Jombart",
+	   email = "thibautjombart@gmail.com",
+	   role = "aut"))
+Maintainer: Pierre Nouvellet <p.nouvellet@imperial.ac.uk>
+Description: Estimate reproduction number from partially observed outbreak sizes.
 Depends: R (>= 3.3.2)
-License: What license is it under?
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Imports:
+Suggest:
+  knitr,
+  testthat
+RoxygenNote: 6.0.0
