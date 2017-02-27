@@ -13,8 +13,9 @@ Depends: R (>= 3.3.2)
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Imports:
+Imports: 
 Suggest:
   knitr,
   testthat
 RoxygenNote: 6.0.0
+Suggests: testthat
