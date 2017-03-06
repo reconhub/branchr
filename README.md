@@ -5,7 +5,7 @@
 
 
 
-*branchr: a framework for reconstructing disease outbreaks*
+*branchr*: R Estimation from Cluster Sizes
 ---------------------------------------------------------------
 
 *branchr* implements estimations of reproduction numbers from cluster size distribution.
@@ -57,7 +57,7 @@ Documentation
 It also comes with the following vignettes:
 
 * vignette 1: ...
-* vignette 2L ...
+* vignette 2: ...
 
 
 <br>
@@ -65,8 +65,8 @@ It also comes with the following vignettes:
 Contributors
 ------------
 
-- [Pierre Nouvellet]
-- [Thibaut Jombart](https://github.com/pnouvellet)
+- [Pierre Nouvellet](https://github.com/pnouvellet)
+- [Thibaut Jombart](https://github.com/thibautjombart)
 
 
 See details of contributions on: <br>

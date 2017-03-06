@@ -5,7 +5,7 @@
 
 
 
-*branchr: a framework for reconstructing disease outbreaks*
+*branchr*: R Estimation from Cluster Sizes
 ---------------------------------------------------------------
 
 *branchr* implements estimations of reproduction numbers from cluster size distribution.
