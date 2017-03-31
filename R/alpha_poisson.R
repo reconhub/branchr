@@ -23,7 +23,7 @@
 #' x
 #'
 
-alpha.poisson <- function(R){
+alpha_poisson <- function(R){
   f <- which(R<=1)
   alpha <- R+lamW::lambertW0(-R*exp(-R))
   alpha[f] <- 0

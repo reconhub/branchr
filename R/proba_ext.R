@@ -23,7 +23,7 @@
 #'
 #
 #
-proba.ext <- function(alpha){
-  proba.ext <- exp(-alpha)
-  return(proba.ext)
+proba_ext <- function(alpha){
+  proba_ext <- exp(-alpha)
+  return(proba_ext)
 }
