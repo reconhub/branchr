@@ -7,7 +7,7 @@
 #'
 #' @export
 #'
-#' @param theta is a vector for which the likelihood has been evaluated
+#' @param XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 #'
 #' @param Likelihood is the log-likelihood values evaluated
 #'
