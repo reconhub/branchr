@@ -44,7 +44,7 @@
 #'
 #' }
 #'
-#' INote that if some simulated outbreaks are not extinct by the end of the simulation, a warning is displayed.
+#' Note that if some simulated outbreaks are not extinct by the end of the simulation, a warning is displayed.
 #'
 #' @examples
 #'
