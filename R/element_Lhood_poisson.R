@@ -32,12 +32,10 @@
 #'
 #' @examples
 #'
-#' x <- element_Lhood_poisson(.5)
-#' x
-#' x <- element_Lhood_poisson(1.5)
+#' x <- element_Lhood_poisson(.5,x$possible_size,x$p_y_z,x$p_0_z)
 #' x
 #'
-#
+
 
 element_Lhood_poisson<-function(R,z,g,g0){
 
