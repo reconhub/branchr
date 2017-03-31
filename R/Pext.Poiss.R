@@ -18,7 +18,7 @@
 #'
 #' @examples
 #'
-#' x <- proba.ext(.5)
+#' x <- proba.ext(c(.5,1))
 #' x
 #'
 #
