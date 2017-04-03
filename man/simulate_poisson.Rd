@@ -2,34 +2,56 @@
 % Please edit documentation in R/simulate_poisson.R
 \name{simulate_poisson}
 \alias{simulate_poisson}
-\title{Simulate bla bla (title)}
+\title{Simulate a partially observed Poisson branching process with discrete generations}
 \usage{
-simulate_poisson(x, y)
+simulate_poisson(R, n, s, rho, t_max)
 }
 \arguments{
-\item{x}{this is what x is}
+\item{R}{is the reproduction number, i.e. the average number of secondary cases due to a single case.
+This can be any positive number. if R is a vector, then the length of R must be 'n' (see below).}
 
-\item{y}{this is what y is}
+\item{n}{is the number of simulations performed. Each simulation start with 's'  individual(s) infected.
+'n' must be a positive integer.}
+
+\item{s}{is the number individual(s) initially infected. if s is a vector, then the length of s must be 'n' (see above).}
+
+\item{rho}{is the probability (between 0 and 1) that an incident case is observed, i.e. reporting probability.
+if rho is a vector, then the length of rho must be 'n' (see below)}
+
+\item{t_max}{is the maximum number of generations simulated. 't_max' must be a positive integer.}
 }
 \value{
-The function returns ....
-}
-\description{
-This is what it does bla bla (descripion). This is \code{some code}.
-Bullet list:
-}
-\details{
+The function returns a list including:
 \itemize{
 
-\item toto: il est beau
+\item true_incidence: the true incidence over time.
 
-\item tata: il est caca
+\item reported_incidence: the observed incidence over time accounting for under-reporting (rho).
+
+\item observed_incidence: same as reported_incidence, but only including simulated outbreaks for which at least a
+single case was observed (i.e. outbreak for which the observed final size is 0, see below reported_size, are removed).
+
+\item true_size: the final outbreak sizes for each simulated outbreaks. Note that for outbreaks that are not extinct
+'final' by the end of the simulation, z_sim correspond to the cumulative incidence by time t_max.
+
+\item reported_size: the observed final outbreak sizes accounting for under-reporting (rho).
+
+\item observed_size: same as reported_size, but only including simulated outbreaks for which at least a
+single case was observed.
 
 }
+
+Note that if some simulated outbreaks are not extinct by the end of the simulation, a warning is displayed.
+}
+\description{
+For a given reproduction number, this function simulate the incidence of a disease at each generation.
+The offspring distribution of each individual infected is assumed to follow a Poisson distribution with mean
+equal to the reproduction number. To simulate under-reporting, users can specify a probability to observe case,
+ this reporting probability is assumed constant through the simulation.
 }
 \examples{
 
-x <- simulate_poisson(1, 2)
+x <- simulate_poisson(.9, 5, 1, .5, 1e2)
 x
 
 }

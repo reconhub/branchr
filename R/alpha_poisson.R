@@ -19,7 +19,7 @@
 #'
 #' @examples
 #'
-#' x <- alpha.poisson(c(1.5,.5))
+#' x <- alpha_poisson(c(1.5,.5))
 #' x
 #'
 
