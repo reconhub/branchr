@@ -17,7 +17,7 @@
 #'  The function returns a list including:
 #' \itemize{
 #'
-#' \item R: a vector of potential R values for which the likelihood has been evaluated.
+#' \item theta: a vector of potential parameter values for which the likelihood has been evaluated.
 #'
 #' \item Likelihood: a vector of likelihood evaluated for the potential R values.
 #'
@@ -39,6 +39,6 @@ profile_likelihood<-function(y_obs,rho,threshold,accuracy,max_R){
     Likelihood[k] <- element_Lhood_poisson(R_grid[k],interim_res$possible_size,
                                    interim_res$p_y_z,interim_res$p_0_z)
   }
-  return( list( R = R_grid, Likelihood = Likelihood) )
+  return( list( theta = R_grid, Likelihood = Likelihood) )
 
 }
