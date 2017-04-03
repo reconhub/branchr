@@ -46,5 +46,5 @@ element_Lhood_poisson<-function(R,z,g,g0){
   # correction for threshold?
   # L2 <- -log( sapply(yobs,
   #                    function(x) correct.tail(x,R,k,p,threshold))  )
-  return( Likelihood=Likelihood )
+  return( Likelihood )
 }

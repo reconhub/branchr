@@ -7,8 +7,6 @@
 #'
 #' @param y_obs: a vector of outbreak sizes observations.
 #' @param rho: the probability of a single case being detected.
-#' @param threshold: the maximum true final size of an outbreak. this need to be much higher
-#' than the largest observed outbreak to account for reporting and properly evaluate the distribution of outbreak sizes
 #' @param accuracy: R will take potential values in a grid spaning from accuracy up to max_R with increments 'accuracy'
 #' @param max_R: R will take potential values in a grid spaning from accuracy up to max_R with increments 'accuracy'
 #'
@@ -29,8 +27,13 @@
 #' x
 #'
 #'
-profile_likelihood<-function(y_obs,rho,threshold,accuracy,max_R){
+profile_likelihood<-function(y_obs,rho,accuracy,max_R){
 
+  #define threshold for calculation, 99.9% that inclde all true size
+  threshold <- max(y_obs)+qnbinom(0.999, max(y_obs),rho,lower.tail=TRUE)+1
+  # check
+  # pbinom(max(y_obs),threshold+max(y_obs),rho) # rounding error??
+  
   interim_res <- proba_observation(y_obs,rho,threshold)
   R_grid <- seq(accuracy,max_R,by=accuracy)
   size_R_grid <- length(R_grid)
