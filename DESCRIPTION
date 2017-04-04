@@ -9,7 +9,7 @@ Authors@R: c(person("Pierre", "Nouvellet",
 	   role = "aut"))
 Maintainer: Pierre Nouvellet <p.nouvellet@imperial.ac.uk>
 Description: Estimate reproduction number from partially observed outbreak sizes.
-Depends: R (>= 3.3.2)
+Depends: R (>= 3.3.0)
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
