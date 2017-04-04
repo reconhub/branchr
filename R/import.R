@@ -35,7 +35,7 @@
 #' x <- element_Lhood_poisson(.5,x$possible_size,x$p_y_z,x$p_0_z)
 #' x
 #'
-import<-function(y_obs,profile,threshold_z,threshold_import,CI){
+import<-function(y_obs,rho,profile,threshold_z,threshold_import,CI){
 
   z <- matrix(seq(1,threshold_z),threshold_z,1)
   g0 <- dbinom(0,matrix(z,1,threshold_z,byrow=TRUE),rho)
